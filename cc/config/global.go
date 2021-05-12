@@ -116,12 +116,6 @@ var (
 	noOverrideGlobalCflags = []string{
 		"-Werror=int-to-pointer-cast",
 		"-Werror=pointer-to-int-cast",
-		// http://b/161386391 for -Wno-void-pointer-to-enum-cast
-		"-Wno-void-pointer-to-enum-cast",
-		// http://b/161386391 for -Wno-void-pointer-to-int-cast
-		"-Wno-void-pointer-to-int-cast",
-		// http://b/161386391 for -Wno-pointer-to-int-cast
-		"-Wno-pointer-to-int-cast",
 		"-Werror=fortify-source",
 	}
 
@@ -138,8 +132,8 @@ var (
 
 	// prebuilts/clang default settings.
 	ClangDefaultBase         = "prebuilts/clang/host"
-	ClangDefaultVersion      = "clang-r399163"
-	ClangDefaultShortVersion = "11.0.4"
+	ClangDefaultVersion      = "clang-r383902b1"
+	ClangDefaultShortVersion = "11.0.2"
 
 	// Directories with warnings from Android.bp files.
 	WarningAllowedProjects = []string{

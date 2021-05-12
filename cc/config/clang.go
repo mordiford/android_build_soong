@@ -101,7 +101,6 @@ var ClangLibToolingUnknownCflags = sorted([]string{})
 // `modernize-*`.
 var ClangTidyDisableChecks = []string{
 	"misc-no-recursion",
-	"readability-function-cognitive-complexity", // http://b/175055536
 }
 
 func init() {
@@ -202,8 +201,6 @@ func init() {
 		"-Wno-pessimizing-move",                     // http://b/154270751
 		// New warnings to be fixed after clang-r399163
 		"-Wno-non-c-typedef-for-linkage", // http://b/161304145
-		// New warnings to be fixed after clang-r407598
-		"-Wno-string-concatenation", // http://b/175068488
 	}, " "))
 
 	// Extra cflags for external third-party projects to disable warnings that
